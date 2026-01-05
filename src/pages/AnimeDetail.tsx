@@ -401,7 +401,7 @@ const AnimeDetailPage: React.FC = () => {
                 </div>
               ) : (
                 <div className="aspect-video flex flex-col items-center justify-center bg-gradient-to-br from-dark-900 to-black">
-                  <div className="w-16 h-16 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mb-4 bg-gray-400 text-white">▶️</div>
+                  <div className="w-16 h-16 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mb-4 bg-gray-400 text-white"></div>
                   <p className="text-gray-400">Memuat video...</p>
                 </div>
               )}

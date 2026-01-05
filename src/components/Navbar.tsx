@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiSearch, FiHome, FiFilm, FiMenu, FiX } from 'react-icons/fi';
+import { FiSearch, FiHome, FiFilm, FiMenu, FiX, FiGrid } from 'react-icons/fi';
 import { MdLocalMovies } from 'react-icons/md';
 
 const Navbar: React.FC = () => {
@@ -21,6 +21,7 @@ const Navbar: React.FC = () => {
   const navItems = [
     { path: '/', label: 'Beranda', icon: <FiHome /> },
     { path: '/movies', label: 'Movie', icon: <MdLocalMovies /> },
+    { path: '/all-anime', label: 'All', icon: <FiGrid /> },
     { path: '/latest', label: 'Terbaru', icon: <FiFilm /> },
   ];
 
@@ -29,7 +30,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2 mr-2">
             <div className="w-10 h-10 nvrg rounded-lg flex items-center justify-center">
               <FiFilm className="text-white text-xl" />
             </div>
@@ -61,12 +62,14 @@ const Navbar: React.FC = () => {
                 className="w-full px-4 py-2 pl-12 bg-dark-800 border border-dark-600 rounded-lg focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 transition-all"
               />
               <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+	      {/*
               <button
                 type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1 bg-primary-600 hover:bg-primary-700 rounded-md transition-colors"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 px-1 py-1 bg-primary-600 hover:bg-primary-700 rounded-md transition-colors"
               >
-                Cari
+	        <FiSearch className="text-gray-400" />
               </button>
+	      */}
             </div>
           </form>
 
