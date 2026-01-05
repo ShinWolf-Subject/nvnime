@@ -26,7 +26,7 @@ const AllAnime: React.FC = () => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const page = parseInt(searchParams.get('page') || '1');
-  const perPage = 20; // Jumlah anime per halaman
+  const perPage = 24;
 
   const [animeList, setAnimeList] = useState<AllAnimeData[]>([]);
   const [loading, setLoading] = useState(true);

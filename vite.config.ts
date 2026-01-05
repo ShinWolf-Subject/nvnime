@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: process.env.DATA_URL,
+        target: 'https://api.sansekai.my.id',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '/api')
       }
